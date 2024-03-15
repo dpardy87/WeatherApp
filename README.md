@@ -19,3 +19,16 @@ Test Project for Small Weather Application
 1. If your key gets temporarily blocked, please get in touch with us and you can get another key
 1. Under the link the usage and samples can be found
 1. Bonus: use the small city meta data https://www.weatherbit.io/api/meta (the one with ~20,000 cities) for the city search
+
+
+### Build Docker Image for specific platform (e.g., ARM64) 
+
+`docker build --platform linux/arm64/v8 -t weather-app .`
+
+### Build Docker Image for default platform 
+
+`docker build -t weather-app .`
+
+### Run Docker Container (`-v` flag for for hot reloading)
+
+`docker run -it -p 8080:5000 -v .:/app weather-app`
